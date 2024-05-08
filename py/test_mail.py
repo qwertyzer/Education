@@ -39,13 +39,17 @@ def send_mail(code):
 
 
 def register_user(code):
-    user_code = input("Enter the verification code sent to your email: ")
-    for Try in range (3, 0):
+    for Try in range (3, 0, -1):
+        user_code = input("Enter the verification code sent to your email: ")
         if user_code == code:
             print("Registration successful!")
+            break
         else:
-            print("Invalid verification code.")
-            print("Attempts left: ", Try)
+            if Try == 1:
+                print("Invalid verification code.\nTry again leter.")
+            else:
+                print("Invalid verification code.")
+                print("Attempts left: ", Try - 1)
             
 
 
