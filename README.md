@@ -1,5 +1,5 @@
 # Education
 
 ### Тут будут файлы с моим обучением
-(img/IMG_8214.JPG)
-(img/IMG_8214.png)
+![Image alt](img/IMG_8214.JPG)
+![Image alt](img/IMG_8214.png)
