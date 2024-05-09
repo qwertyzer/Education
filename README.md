@@ -1,4 +1,4 @@
 # Education
 
 ### Тут будут файлы с моим обучением
-![Image alt](img/IMG_8214.JPG)
+![говно](img/IMG_8214.JPG)
