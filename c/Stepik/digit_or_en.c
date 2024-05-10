@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 int main() {
-  int n;
+  char n;
+  scanf("%c", &n);
 
-  if (scanf("%d", &n)) {
+  if (n > 47 && n < 58) {
     printf("digit");
   } else if ((n > 64 && n < 91) || (n > 96 && n < 123)) {
     printf("en");
