@@ -6,4 +6,4 @@ all:
 	$(GCC) -o result.out extra_space.c
 
 clean:
-	rm -rf *.out .clang-format
+	rm -rf *.out .clang-format *.dSYM
