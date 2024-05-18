@@ -3,7 +3,7 @@ CLANG = clang-format -i *.c
 all:
 	cp ../materials/.clang-format .clang-format
 	$(CLANG)
-	$(GCC) -o result.out formatted_number_output.c
+	$(GCC) -o result.out first_and_last.c
 
 clean:
 	rm -rf *.out .clang-format *.dSYM
