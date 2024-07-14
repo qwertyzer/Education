@@ -1,0 +1,1 @@
+![Task](../img/Score_of_a_String.png)
