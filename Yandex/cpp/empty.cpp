@@ -1,14 +1,8 @@
 #include <iostream>
-
-int test(int a);
+#include <cmath>
 
 int main() {
-    int a, b;
-    std::cin >> a >> b;
-    std::cout << test(a) << std::endl;
+    double a = 41, b = 11;
+    std::cout <<floor(a / b) << std::endl; 
     return 0;
-}
-
-int test(int a) {
-    return a * 1.1;
 }
