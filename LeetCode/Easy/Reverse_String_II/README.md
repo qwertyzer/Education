@@ -1,1 +1,1 @@
-![Task](../img/Reverse_String_II.png.png)
+![Task](../img/Reverse_String_II.png)
