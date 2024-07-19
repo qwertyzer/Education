@@ -1,0 +1,1 @@
+![Task](../img/Find_the_Pivot_Integer.png)
