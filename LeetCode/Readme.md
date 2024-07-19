@@ -1,4 +1,4 @@
 # LeetCode
 
-### Тут будут решния задачь с LeetCode
+### Тут будут решения задачь с LeetCode
 ![LeetCode](../img/LeetCode.jpeg)
