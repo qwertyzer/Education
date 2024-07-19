@@ -1,0 +1,1 @@
+![Task](../img/Construct_the_Rectangle.png)
