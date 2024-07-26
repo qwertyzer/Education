@@ -1,10 +1,10 @@
-GCC = g++ -Wall -Werror -Wextra
+GCC = g++ --std=c++17 -O3 -Wall -Werror -Wextra
 CLANG = clang-format -i *.cpp
 
 all:
 	cp ../../materials/.clang-format .clang-format
 	$(CLANG)
-	$(GCC) -o result.out extra_space.cpp
+	$(GCC) -o result.out word_count.cpp
 
 clean:
 	rm -rf *.out .clang-format *.dSYM

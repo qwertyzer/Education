@@ -1,0 +1,1 @@
+![Task](../img/Number_of_Good_Pairs.png)
