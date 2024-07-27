@@ -7,28 +7,33 @@ int countPrimes(int n);
 int main() {
   int n;
   std::cin >> n;
-  countPrimes(n);
+  std::cout << countPrimes(n) << std::endl;
+
   return 0;
 }
 
 int countPrimes(int n) {
-  int result = 0, p = 2, i = 0;
-  std::vector<int> numbers;
   if (n < 2) {
-    result = 0;
-  } else {
-    for (int k = 0; k != n; k++) {
-      numbers.push_back(k);
-    }
-    while (p <= sqrt(n)) {
-      if (numbers[i] % p == 0) {
-        numbers.erase(numbers.begin() + i);
+    return 0;
+  }
+
+  std::vector<bool> isPrime(n, true);
+  isPrime[0] = isPrime[1] = false;
+  int count = 0;
+
+  for (int p = 2; p < sqrt(n); ++p) {
+    if (isPrime[p]) {
+      for (int multiple = p * p; multiple < n; multiple += p) {
+        isPrime[multiple] = false;
       }
-      i++;
     }
   }
-  for (int j : numbers) {
-    std::cout << j << " " << std::endl;
+
+  for (int i = 0; i < n; ++i) {
+    if (isPrime[i]) {
+      count++;
+    }
   }
-  return result;
+
+  return count;
 }
