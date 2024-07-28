@@ -10,16 +10,16 @@ int main() {
 }
 
 int passThePillow(int n, int time) {
-    int total_cycles = 2 * (n - 1);
-    int remainder = time % total_cycles;
-    int result;
-    
-    if (remainder < n) {
-        result = remainder + 1;
-    } else {
-        result = n - (remainder - (n - 1));
-    }
-    return result;
+  int total_cycles = 2 * (n - 1);
+  int remainder = time % total_cycles;
+  int result;
+
+  if (remainder < n) {
+    result = remainder + 1;
+  } else {
+    result = n - (remainder - (n - 1));
+  }
+  return result;
 }
 
 // n = 2 time = 7
