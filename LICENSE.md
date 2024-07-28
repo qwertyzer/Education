@@ -1,1 +1,1 @@
-# qwertyzer LICENSE
+qwertyzer LICENSE
