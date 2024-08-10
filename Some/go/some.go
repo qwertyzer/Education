@@ -5,5 +5,7 @@ import (
 )
 
 func main() {
-	fmt.Print("Hello!")
+	var stroka string
+	fmt.Scan(&stroka)
+	fmt.Print("Hello, ", stroka, "!")
 }
