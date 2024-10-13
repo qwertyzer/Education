@@ -1,0 +1,1 @@
+![Task](../img/Majority_Element.png)
