@@ -16,7 +16,20 @@ int main() {
 }
 
 int majorityElement(std::vector<int>& nums) {
-  int result;
-  // тут должна быть логика, щас спать иду, завтра напишу
+  int result, count = 0;
+
+  for (int i : nums) {
+    if (count == 0) {
+      result = i;
+    }
+    i == result ? count++ : count--;
+  }
+  count = 0;
+  for (int i : nums) {
+    if (i == result) {
+      count++;
+    }
+  }
+
   return result;
 }

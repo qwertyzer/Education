@@ -1,0 +1,1 @@
+![Task](../img/Optimal_Division.png)
