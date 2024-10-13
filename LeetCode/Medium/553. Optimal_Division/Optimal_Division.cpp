@@ -1,48 +1,41 @@
 #include <iostream>
+#include <string>
 #include <vector>
 
-std::vector<std::vector<int>> generateMatrix(int n);
+std::string optimalDivision(std::vector<int>& nums);
 
 int main() {
-  int n;
+  int n, val;
+  std::vector<int> nums;
   std::cin >> n;
-  std::vector<std::vector<int>> result = generateMatrix(n);
-  for (const auto& row : result) {
-    for (int i : row) {
-      std::cout << i << " ";
-    }
+  for (int i = 0; i < n; i++) {
+    std::cin >> val;
+    nums.push_back(val);
   }
+  std::cout << optimalDivision(nums) << std::endl;
   return 0;
 }
 
-std::vector<std::vector<int>> generateMatrix(int n) {
-  std::vector<std::vector<int>> result(n, std::vector<int>(n, 1));
-  int top = 0, bottom = n - 1;
-  int left = 0, right = n - 1;
-  int number = 1;
-  if (n == 1) {
+std::string optimalDivision(std::vector<int>& nums) {
+  std::string result;
+  int number = nums[0];
+  if (size(nums) == 1) {
+    result = std::to_string(nums[0]);
+    return result;
+  } else if (size(nums) == 2) {
+    result = std::to_string(nums[0]) + '/' + std::to_string(nums[1]);
     return result;
   }
-  while (top <= bottom && left <= right) {
-    for (int i = left; i <= right; ++i) {
-      result[top][i] = number++;
+  for (size_t i = 0; i < size(nums); i++) {
+    number = nums[i];
+    result += std::to_string(number);
+    if (i == 0) {
+      result += "/(";
+    } else if (i == size(nums) - 1) {
+      result += ')';
+    } else {
+      result += '/';
     }
-    top++;
-
-    for (int i = top; i <= bottom; ++i) {
-      result[i][right] = number++;
-    }
-    right--;
-
-    for (int i = right; i >= left; --i) {
-      result[bottom][i] = number++;
-    }
-    bottom--;
-
-    for (int i = bottom; i >= top; --i) {
-      result[i][left] = number++;
-    }
-    left++;
   }
   return result;
 }
