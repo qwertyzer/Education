@@ -1,0 +1,1 @@
+![Task](../img/Count_Ways_to_Group_Overlapping_Ranges.png)
